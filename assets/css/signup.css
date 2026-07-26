@@ -1,0 +1,244 @@
+/* ==========================================================
+   StayNest Signup Page
+   File : assets/css/signup.css
+========================================================== */
+
+
+/* ==========================================
+            SIGNUP SECTION
+========================================== */
+
+.signup-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px 0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(37,99,235,.15),
+    transparent 35%),
+
+    #0B1120;
+
+}
+
+
+/* ==========================================
+            SIGNUP CARD
+========================================== */
+
+.signup-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.30);
+
+}
+
+
+/* ==========================================
+            LOGO
+========================================== */
+
+.signup-logo{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================
+            HEADING
+========================================== */
+
+.signup-card h2{
+
+    color:#FFFFFF;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.signup-card p{
+
+    color:#94A3B8;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================================
+            LABELS
+========================================== */
+
+.form-label{
+
+    color:#CBD5E1;
+
+    font-weight:500;
+
+}
+
+
+/* ==========================================
+            INPUTS
+========================================== */
+
+.form-control{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#fff;
+
+    height:55px;
+
+    border-radius:12px;
+
+}
+
+.form-control::placeholder{
+
+    color:#64748B;
+
+}
+
+.form-control:focus{
+
+    background:rgba(255,255,255,.08);
+
+    border-color:#2563EB;
+
+    color:#fff;
+
+    box-shadow:none;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.btn-signup-page{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-signup-page:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+
+/* ==========================================
+            LOGIN LINK
+========================================== */
+
+.login-text{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#CBD5E1;
+
+}
+
+.login-text a{
+
+    color:#3B82F6;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-text a:hover{
+
+    color:#60A5FA;
+
+}
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .signup-card{
+
+        padding:35px 25px;
+
+    }
+
+    .signup-card h2{
+
+        font-size:28px;
+
+    }
+
+}

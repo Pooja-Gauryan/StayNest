@@ -1,0 +1,396 @@
+/* ==========================================================
+   StayNest - Hero Section
+   File : assets/css/hero.css
+========================================================== */
+
+/* ================================
+        HERO SECTION
+================================ */
+
+.hero-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top left,#1D4ED8 0%,transparent 28%),
+    radial-gradient(circle at bottom right,#0891B2 0%,transparent 25%),
+    #0B1120;
+
+    padding-top:120px;
+    padding-bottom:80px;
+
+}
+
+/* ================================
+        BACKGROUND GLOW
+================================ */
+
+.hero-bg-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    z-index:0;
+
+}
+
+.hero-circle-1{
+
+    width:450px;
+    height:450px;
+
+    background:#2563EB;
+
+    top:-120px;
+    left:-120px;
+
+}
+
+.hero-circle-2{
+
+    width:380px;
+    height:380px;
+
+    background:#06B6D4;
+
+    bottom:-100px;
+    right:-100px;
+
+}
+
+/* ================================
+        CONTENT
+================================ */
+
+.hero-section .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 22px;
+
+    background:rgba(59,130,246,.12);
+
+    border:1px solid rgba(59,130,246,.35);
+
+    color:#93C5FD;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.hero-title{
+
+    color:#ffffff;
+
+    font-size:64px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin:30px 0 20px;
+
+}
+
+.hero-title span{
+
+    color:#3B82F6;
+
+}
+
+.hero-description{
+
+    color:#94A3B8;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    max-width:550px;
+
+    margin-bottom:40px;
+
+}
+
+/* ================================
+        SEARCH BOX
+================================ */
+
+.hero-search{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    padding:22px;
+
+    margin-bottom:50px;
+
+}
+
+.hero-input{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    height:58px;
+
+    border-radius:14px;
+
+}
+
+.hero-input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.hero-input:focus{
+
+    background:#111827;
+
+    color:#ffffff;
+
+    border-color:#2563EB;
+
+    box-shadow:none;
+
+}
+
+.hero-search-btn{
+
+    height:58px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    transition:.35s;
+
+}
+
+.hero-search-btn:hover{
+
+    transform:translateY(-2px);
+
+    color:#ffffff;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+
+}
+
+/* ================================
+        STATS
+================================ */
+
+.hero-stats{
+
+    display:flex;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.stat-box{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:22px 30px;
+
+    min-width:150px;
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#3B82F6;
+
+}
+
+.stat-box h3{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.stat-box p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+/* ================================
+        IMAGE
+================================ */
+
+.hero-image-wrapper{
+
+    position:relative;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:580px;
+
+    animation:floatImage 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 40px 70px rgba(0,0,0,.45));
+
+}
+
+/* ================================
+        FLOAT
+================================ */
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ================================
+        RESPONSIVE
+================================ */
+
+@media(max-width:991px){
+
+    .hero-section{
+
+        text-align:center;
+
+        padding-top:140px;
+
+    }
+
+    .hero-title{
+
+        font-size:44px;
+
+    }
+
+    .hero-description{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        margin-top:60px;
+
+        max-width:420px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-title{
+
+        font-size:34px;
+
+    }
+
+    .hero-search{
+
+        padding:18px;
+
+    }
+
+    .stat-box{
+
+        width:100%;
+
+    }
+
+}

@@ -1,0 +1,207 @@
+/* ==========================================================
+   StayNest Logout Modal
+   File : assets/css/logout.css
+========================================================== */
+
+
+/* ==========================================
+            Modal
+========================================== */
+
+.logout-modal{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    color:#FFFFFF;
+
+}
+
+
+/* ==========================================
+            Body
+========================================== */
+
+.logout-modal .modal-body{
+
+    padding:45px 35px;
+
+}
+
+
+/* ==========================================
+            Icon
+========================================== */
+
+.logout-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.30);
+
+}
+
+.logout-icon i{
+
+    font-size:38px;
+
+    color:#FFFFFF;
+
+}
+
+
+/* ==========================================
+            Heading
+========================================== */
+
+.logout-modal h3{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================================
+            Text
+========================================== */
+
+.logout-modal p{
+
+    color:#94A3B8;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ==========================================
+            Buttons
+========================================== */
+
+.logout-btn{
+
+    background:#EF4444 !important;
+
+    color:#FFFFFF !important;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* Cancel */
+
+.cancel-btn{
+
+    background:#1E293B;
+
+    color:#FFFFFF;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+}
+
+.cancel-btn:hover{
+
+    background:#334155;
+
+    color:#FFFFFF;
+
+}
+
+
+/* Logout */
+
+.logout-btn{
+
+    background:#EF4444;
+
+    color:#FFFFFF;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+    background:#DC2626;
+    color:#FFFFFF;
+    transform:translateY(-2px);
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:576px){
+
+    .logout-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cancel-btn,
+
+    .logout-btn{
+
+        width:100%;
+
+    }
+
+}

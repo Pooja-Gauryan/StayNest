@@ -1,0 +1,313 @@
+/* ==========================================================
+   StayNest Dashboard Home
+   File : assets/css/home.css
+========================================================== */
+
+
+/* ==========================================
+            Dashboard Home
+========================================== */
+
+.dashboard-home{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+            Welcome Card
+========================================== */
+
+.welcome-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+}
+
+.welcome-text h2{
+
+    color:#FFFFFF;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.welcome-text p{
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+    margin:0;
+
+    max-width:650px;
+
+}
+
+
+/* ==========================================
+            Stats Cards
+========================================== */
+
+.stats-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2563EB;
+
+}
+
+.stats-card i{
+
+    font-size:34px;
+
+    color:#3B82F6;
+
+    margin-bottom:18px;
+
+}
+
+.stats-card h3{
+
+    color:#FFFFFF;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.stats-card p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+            Content Card
+========================================== */
+
+.content-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:28px;
+
+}
+
+
+/* ==========================================
+            Section Header
+========================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.section-header h4{
+
+    color:#FFFFFF;
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+.section-header a{
+
+    text-decoration:none;
+
+    color:#3B82F6;
+
+    font-weight:600;
+
+}
+
+.section-header a:hover{
+
+    color:#60A5FA;
+
+}
+
+
+/* ==========================================
+            Coming Soon
+========================================== */
+
+.coming-soon{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+            Activity
+========================================== */
+
+.activity-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.activity-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 0;
+
+    color:#CBD5E1;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.activity-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+.activity-list i{
+
+    color:#3B82F6;
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================
+            Tablet
+========================================== */
+
+@media(max-width:991px){
+
+    .welcome-card{
+
+        padding:28px;
+
+    }
+
+    .welcome-text h2{
+
+        font-size:28px;
+
+    }
+
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:576px){
+
+    .welcome-card{
+
+        padding:22px;
+
+    }
+
+    .welcome-text h2{
+
+        font-size:24px;
+
+    }
+
+    .welcome-text p{
+
+        font-size:14px;
+
+    }
+
+    .stats-card{
+
+        padding:22px;
+
+    }
+
+    .stats-card h3{
+
+        font-size:24px;
+
+    }
+
+    .content-card{
+
+        padding:20px;
+
+    }
+
+    .section-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+}

@@ -1,0 +1,87 @@
+/* ==========================================
+   StayNest Reset Styles
+   File: reset.css
+   ========================================== */
+
+/* Universal Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+    background: var(--background-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Images */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Lists */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    font: inherit;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    font: inherit;
+    background: transparent;
+}
+
+/* Tables */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Text Selection */
+
+::selection {
+    background: var(--primary-color);
+    color: #ffffff;
+}

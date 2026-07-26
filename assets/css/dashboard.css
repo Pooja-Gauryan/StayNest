@@ -1,0 +1,98 @@
+/* ==========================================================
+   StayNest Dashboard Layout
+   File : assets/css/dashboard.css
+========================================================== */
+
+/* ==========================================
+            Dashboard Body
+========================================== */
+body{
+    background:#0B1120;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+            Main Content
+========================================== */
+.dashboard-content{
+    margin-left:280px;
+    min-height:100vh;
+    padding:30px;
+    transition:.3s;
+}
+
+/* ==========================================
+            Page Header
+========================================== */
+.page-header{
+    margin-bottom:35px;
+}
+
+.page-header h2{
+    font-size:32px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#94A3B8;
+    margin:0;
+}
+
+/* ==========================================
+            Dashboard Section
+========================================== */
+.dashboard-section{
+    margin-bottom:40px;
+}
+
+/* ==========================================
+            Card
+========================================== */
+.dashboard-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:20px;
+    padding:25px;
+}
+
+/* ==========================================
+            Scrollbar
+========================================== */
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563EB;
+    border-radius:30px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0B1120;
+}
+
+/* ==========================================
+            Tablet
+========================================== */
+@media(max-width:991px){
+    .dashboard-content{
+        margin-left:0;
+        padding:90px 20px 20px;
+    }
+}
+
+/* ==========================================
+            Mobile
+========================================== */
+@media(max-width:576px){
+    .dashboard-content{
+        padding:85px 15px 15px;
+    }
+
+    .page-header h2{
+        font-size:26px;
+    }
+}

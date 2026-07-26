@@ -1,0 +1,181 @@
+/* ==========================================================
+   StayNest - Testimonials Section
+   File : assets/css/testimonial.css
+========================================================== */
+
+/* ==========================
+   SECTION
+========================== */
+
+.testimonials-section{
+    background:#0B1120;
+    padding:120px 0;
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.section-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:50px;
+    background:rgba(37,99,235,.12);
+    border:1px solid rgba(37,99,235,.30);
+    color:#60A5FA;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.section-title{
+    color:#ffffff;
+    font-size:46px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.section-description{
+    color:#94A3B8;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.testimonial-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 25px 40px rgba(0,0,0,.35);
+
+}
+
+/* ==========================
+   STARS
+========================== */
+
+.testimonial-stars{
+
+    color:#FBBF24;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   REVIEW
+========================== */
+
+.testimonial-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    font-size:15px;
+
+    margin-bottom:28px;
+
+}
+
+/* ==========================
+   USER
+========================== */
+
+.testimonial-user{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.testimonial-user img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #2563EB;
+
+    margin-right:18px;
+
+}
+
+.testimonial-user h5{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:4px;
+
+}
+
+.testimonial-user span{
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+    .testimonials-section{
+
+        padding:90px 0;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .section-title{
+
+        font-size:32px;
+
+    }
+
+    .testimonial-card{
+
+        padding:28px;
+
+    }
+
+}

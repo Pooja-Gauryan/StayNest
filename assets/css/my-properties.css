@@ -1,0 +1,335 @@
+/* ==========================================================
+   StayNest My Properties
+   File : assets/css/my-properties.css
+========================================================== */
+
+
+/* ==========================================
+            My Properties Page
+========================================== */
+
+.my-properties-page{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+            Statistics Card
+========================================== */
+
+.stats-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.stats-card:hover{
+
+    border-color:#2563EB;
+
+    transform:translateY(-5px);
+
+}
+
+.stats-card h3{
+
+    color:#FFFFFF;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.stats-card p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+            Property Card
+========================================== */
+
+.my-property-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.my-property-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+
+}
+
+
+/* ==========================================
+            Image
+========================================== */
+
+.my-property-image{
+
+    position:relative;
+
+    height:220px;
+
+    overflow:hidden;
+
+}
+
+.my-property-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.my-property-card:hover .my-property-image img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* ==========================================
+            Status Badge
+========================================== */
+
+.status-badge{
+
+    position:absolute;
+
+    top:16px;
+
+    left:16px;
+
+    background:#10B981;
+
+    color:#FFFFFF;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+            Body
+========================================== */
+
+.my-property-body{
+
+    padding:22px;
+
+    flex:1;
+
+}
+
+.my-property-body h4{
+
+    color:#FFFFFF;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.property-location{
+
+    color:#94A3B8;
+
+    margin-bottom:16px;
+
+}
+
+.property-location i{
+
+    color:#3B82F6;
+
+    margin-right:6px;
+
+}
+
+.property-price{
+
+    color:#FFFFFF;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.property-price span{
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    font-weight:400;
+
+}
+
+.property-rating{
+
+    color:#FACC15;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+            Action Buttons
+========================================== */
+
+.property-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.property-actions .btn{
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    padding:10px;
+
+    transition:.3s;
+
+}
+
+
+/* View */
+
+.btn-view{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+.btn-view:hover{
+
+    background:#1D4ED8;
+
+    color:#FFFFFF;
+
+}
+
+
+/* Edit */
+
+.btn-edit{
+
+    background:#F59E0B;
+
+    color:#FFFFFF;
+
+}
+
+.btn-edit:hover{
+
+    background:#D97706;
+
+    color:#FFFFFF;
+
+}
+
+
+/* Delete */
+
+.btn-delete{
+
+    background:#EF4444;
+
+    color:#FFFFFF;
+
+    border:none;
+
+}
+
+.btn-delete:hover{
+
+    background:#DC2626;
+
+    color:#FFFFFF;
+
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:576px){
+
+    .property-actions{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

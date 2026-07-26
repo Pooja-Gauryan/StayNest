@@ -1,0 +1,516 @@
+/* ==========================================================
+   StayNest Messages
+   File : assets/css/messages.css
+========================================================== */
+
+
+/* ==========================================
+            Page
+========================================== */
+
+.messages-page{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+            Header
+========================================== */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.page-header h2{
+
+    color:#FFFFFF;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.page-header p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+            Layout
+========================================== */
+
+.messages-container{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:25px;
+
+    height:calc(100vh - 170px);
+
+}
+
+
+/* ==========================================
+            Chat List
+========================================== */
+
+.chat-list{
+
+    background:#111827;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ==========================================
+            Search
+========================================== */
+
+.chat-search{
+
+    position:relative;
+
+    padding:20px;
+
+}
+
+.chat-search i{
+
+    position:absolute;
+
+    left:35px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#94A3B8;
+
+}
+
+.chat-search input{
+
+    width:100%;
+
+    background:#1E293B;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 15px 12px 45px;
+
+    color:#FFFFFF;
+
+}
+
+.chat-search input:focus{
+
+    outline:none;
+
+}
+
+
+/* ==========================================
+            Chat Item
+========================================== */
+
+.chat-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.chat-item:hover{
+
+    background:#1E293B;
+
+}
+
+.chat-item.active{
+
+    background:#2563EB;
+
+}
+
+.chat-item img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.chat-info{
+
+    flex:1;
+
+}
+
+.chat-info h5{
+
+    color:#FFFFFF;
+
+    margin-bottom:4px;
+
+    font-size:16px;
+
+}
+
+.chat-info p{
+
+    color:#CBD5E1;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+.chat-time{
+
+    color:#CBD5E1;
+
+    font-size:12px;
+
+}
+
+/* ==========================================
+            Chat Window
+========================================== */
+
+.chat-window{
+
+    background:#111827;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================
+            Chat Header
+========================================== */
+
+.chat-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px 25px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.chat-header img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.chat-header h5{
+
+    color:#FFFFFF;
+
+    margin:0;
+
+}
+
+.chat-header small{
+
+    color:#10B981;
+
+}
+
+
+/* ==========================================
+            Chat Body
+========================================== */
+
+.chat-body{
+
+    flex:1;
+
+    padding:25px;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* ==========================================
+            Messages
+========================================== */
+
+.message{
+
+    max-width:70%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.message.received{
+
+    align-self:flex-start;
+
+}
+
+.message.sent{
+
+    align-self:flex-end;
+
+}
+
+.message-text{
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    line-height:1.6;
+
+    word-wrap:break-word;
+
+}
+
+.message.received .message-text{
+
+    background:#1E293B;
+
+    color:#FFFFFF;
+
+}
+
+.message.sent .message-text{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+.message-time{
+
+    font-size:12px;
+
+    color:#94A3B8;
+
+    margin-top:6px;
+
+    padding:0 8px;
+
+}
+
+
+/* ==========================================
+            Chat Footer
+========================================== */
+
+.chat-footer{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.chat-footer input{
+
+    flex:1;
+
+    background:#1E293B;
+
+    border:none;
+
+    border-radius:14px;
+
+    color:#FFFFFF;
+
+    padding:14px 18px;
+
+}
+
+.chat-footer input:focus{
+
+    outline:none;
+
+    box-shadow:none;
+
+    background:#273449;
+
+    color:#FFFFFF;
+
+}
+
+.send-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    color:#FFFFFF;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.send-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================
+            Scrollbar
+========================================== */
+
+.chat-body::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:991px){
+
+    .messages-container{
+
+        grid-template-columns:1fr;
+
+        height:auto;
+
+    }
+
+    .chat-list{
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .chat-header{
+
+        padding:15px;
+
+    }
+
+    .chat-body{
+
+        padding:18px;
+
+    }
+
+    .message{
+
+        max-width:90%;
+
+    }
+
+    .chat-footer{
+
+        padding:15px;
+
+    }
+
+}

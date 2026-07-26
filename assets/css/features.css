@@ -1,0 +1,251 @@
+/* ==========================================================
+   StayNest - Features Section
+   File : assets/css/features.css
+========================================================== */
+
+/* ==========================================
+        FEATURES SECTION
+========================================== */
+
+.features-section{
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background: #0F172A;
+
+    overflow: hidden;
+
+}
+
+/* ==========================================
+        SECTION HEADING
+========================================== */
+
+.section-badge{
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background: rgba(37,99,235,.12);
+
+    border: 1px solid rgba(37,99,235,.30);
+
+    color: #60A5FA;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 22px;
+
+}
+
+.section-title{
+
+    color: #FFFFFF;
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+
+}
+
+.section-description{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #94A3B8;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+}
+
+/* ==========================================
+            FEATURE CARD
+========================================== */
+
+.feature-card{
+
+    position: relative;
+
+    background: rgba(255,255,255,.04);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    padding: 40px 28px;
+
+    text-align: center;
+
+    transition: .35s ease;
+
+    overflow: hidden;
+
+    height: 100%;
+
+}
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:160px;
+
+    height:160px;
+
+    background:rgba(37,99,235,.08);
+
+    border-radius:50%;
+
+    transition:.4s;
+
+}
+
+.feature-card:hover{
+
+    transform: translateY(-12px);
+
+    border-color:#3B82F6;
+
+    box-shadow:
+
+    0 25px 45px rgba(0,0,0,.35);
+
+}
+
+.feature-card:hover::before{
+
+    transform:scale(1.4);
+
+}
+
+/* ==========================================
+            ICON
+========================================== */
+
+.feature-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    color:#ffffff;
+
+    margin-bottom:28px;
+
+    box-shadow:
+
+    0 15px 30px rgba(37,99,235,.30);
+
+}
+
+/* ==========================================
+            TITLE
+========================================== */
+
+.feature-card h4{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+            DESCRIPTION
+========================================== */
+
+.feature-card p{
+
+    color:#94A3B8;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin:0;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:991px){
+
+    .features-section{
+
+        padding:90px 0;
+
+    }
+
+    .section-title{
+
+        font-size:38px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+    .feature-card{
+
+        padding:35px 25px;
+
+    }
+
+}
+

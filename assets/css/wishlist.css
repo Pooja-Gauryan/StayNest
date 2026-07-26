@@ -1,0 +1,213 @@
+/* ==========================================================
+   StayNest Wishlist
+   File : assets/css/wishlist.css
+========================================================== */
+
+
+/* ==========================================
+            Wishlist Page
+========================================== */
+
+.wishlist-page{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+            Page Header
+========================================== */
+
+.wishlist-page .page-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.wishlist-page .page-title h2{
+
+    color:#FFFFFF;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.wishlist-page .page-title p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+            Empty State
+========================================== */
+
+.empty-state{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+.empty-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#0F172A;
+
+}
+
+.empty-icon i{
+
+    color:#EF4444;
+
+    font-size:40px;
+
+}
+
+.empty-state h3{
+
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.empty-state p{
+
+    color:#94A3B8;
+
+    max-width:420px;
+
+    margin:0 auto 25px;
+
+}
+
+.browse-btn{
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    color:#FFFFFF;
+
+    padding:12px 28px;
+
+    border-radius:14px;
+
+    border:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.browse-btn:hover{
+
+    color:#FFFFFF;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================
+            Tablet
+========================================== */
+
+@media(max-width:991px){
+
+    .wishlist-page .page-title{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:576px){
+
+    .wishlist-page .page-title h2{
+
+        font-size:26px;
+
+    }
+
+    .empty-state{
+
+        padding:45px 20px;
+
+    }
+
+    .empty-icon{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .empty-icon i{
+
+        font-size:32px;
+
+    }
+
+    .browse-btn{
+
+        width:100%;
+
+    }
+
+}

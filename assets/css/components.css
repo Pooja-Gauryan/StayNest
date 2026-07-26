@@ -1,0 +1,87 @@
+/* ==========================================
+   StayNest UI Components
+   File: components.css
+   ========================================== */
+
+/* ===========================
+   Button Base
+=========================== */
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:12px 24px;
+    border:none;
+    border-radius:var(--radius-md);
+    font-family:var(--font-body);
+    font-size:var(--fs-md);
+    font-weight:var(--fw-medium);
+    cursor:pointer;
+    transition:var(--transition-normal);
+    text-decoration:none;
+    user-select:none;
+}
+
+/* ===========================
+   Primary Button
+=========================== */
+.btn-primary{
+    background:var(--primary-color);
+    color:white;
+    box-shadow:var(--shadow-sm);
+}
+
+.btn-primary:hover{
+    background:var(--primary-hover);
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-md);
+}
+
+/* ===========================
+   Secondary Button
+=========================== */
+.btn-secondary{
+    background:transparent;
+    color:var(--text-primary);
+    border:1px solid var(--border-color);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* ===========================
+   success Button
+=========================== */
+.btn-success{
+    background:var(--success-color);
+    color:white;
+}
+
+.btn-success:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-md);
+}
+
+/* ===========================
+   DAnger Button
+=========================== */
+.btn-danger{
+    background:var(--danger-color);
+    color:white;
+}
+
+.btn-danger:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-md);
+}
+
+/* ===========================
+   Disabled Button
+=========================== */
+.btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+    pointer-events:none;
+}
