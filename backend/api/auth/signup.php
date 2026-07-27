@@ -6,7 +6,7 @@ require_once "../../config/database.php";
 require_once "../../helpers/validator.php";
 require_once "../../helpers/response.php";
 require_once "../../helpers/session.php";
-require_once "../../middleware/guest.php";
+// require_once "../../middleware/guest.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     jsonResponse(false, "Invalid Request", [], 405);

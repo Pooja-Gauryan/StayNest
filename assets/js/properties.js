@@ -43,3 +43,33 @@ card.parentElement.style.display=show?"":"none";
 });
 
 });
+
+document.querySelectorAll(".wishlist-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const id=btn.dataset.id;
+
+fetch("../backend/api/wishlist/add.php",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/x-www-form-urlencoded"
+},
+
+body:"property_id="+id
+
+})
+
+.then(r=>r.json())
+
+.then(data=>{
+
+alert(data.message);
+
+});
+
+});
+
+});

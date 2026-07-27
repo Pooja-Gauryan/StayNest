@@ -42,3 +42,11 @@ $stmt->execute([
 ]);
 
 $_SESSION["success"] = "Property Deleted Successfully";
+
+jsonResponse(
+
+    true,
+
+    "Property Deleted Successfully"
+
+);

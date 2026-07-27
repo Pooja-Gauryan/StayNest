@@ -1,14 +1,3 @@
-alert("JS Loaded");
-
-form.addEventListener("submit", async function(e){
-
-    alert("Form Submitted");
-
-    e.preventDefault();
-
-    ...
-});
-
 document.addEventListener("DOMContentLoaded", () => {
 
     loadAmenities();
@@ -48,21 +37,33 @@ console.log("After Fetch");
 
             if (result.success) {
 
-                alert(result.message);
+                Swal.fire({
+                    icon:"success",
+                    title:"Success",
+                    text:result.message,
+                    timer:2000,
+                    showConfirmButton:false
+                });
 
-                form.reset();
-
-                window.location.href = "my-properties.php";
+form.reset();
 
             } else {
 
-                alert(result.message);
+                Swal.fire({
+                    icon:"error",
+                    title:"Oops...",
+                    text:result.message
+                });
 
             }
 
         } catch (error) {
 
-            alert("Network Error");
+            Swal.fire({
+                icon:"error",
+                title:"Network Error",
+                text:"Please try again."
+            });
 
             console.error(error);
 

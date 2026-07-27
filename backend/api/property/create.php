@@ -96,6 +96,7 @@ try {
         $data["state"],
 
         $data["pincode"]
+        
 
     ]);
 
