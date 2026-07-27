@@ -14,7 +14,7 @@ The platform allows students to discover suitable accommodations while enabling 
 
 # 📂 GitHub Repository
 
-👉 https://github.com/YourUsername/StayNest
+👉 https://github.com/Pooja-Gauryan/StayNest
 
 ---
 
