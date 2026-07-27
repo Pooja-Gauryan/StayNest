@@ -4,6 +4,7 @@
 
 <section class="my-properties-page">
 
+
     <!-- ==========================
             Page Header
     =========================== -->
@@ -47,10 +48,9 @@
 
             <div class="stats-card">
 
+
                 <h3>
-
-                    12
-
+                    <?= $totalProperties ?>
                 </h3>
 
                 <p>
@@ -68,9 +68,7 @@
             <div class="stats-card">
 
                 <h3>
-
-                    8
-
+                    <?= $availableProperties ?>
                 </h3>
 
                 <p>
@@ -88,9 +86,7 @@
             <div class="stats-card">
 
                 <h3>
-
-                    4
-
+                    <?= $occupiedProperties ?>
                 </h3>
 
                 <p>

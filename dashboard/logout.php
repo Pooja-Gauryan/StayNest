@@ -1,21 +1,10 @@
-<li class="sidebar-item sidebar-bottom">
+<?php
 
-    <a href="#"
+session_start();
 
-       class="sidebar-link logout-link"
+session_unset();
 
-       data-bs-toggle="modal"
+session_destroy();
 
-       data-bs-target="#logoutModal">
-
-        <i class="bi bi-box-arrow-right"></i>
-
-        <span>
-
-            Logout
-
-        </span>
-
-    </a>
-
-</li>
+header("Location: ../index.php");
+exit;

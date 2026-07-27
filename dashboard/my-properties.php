@@ -25,14 +25,70 @@ ORDER BY p.created_at DESC
 ");
 
 $stmt->execute([
-$_SESSION["user"]["id"]
+      $_SESSION["user"]["id"]
 ]);
 
-$properties=$stmt->fetchAll();
+$properties = $stmt->fetchAll();
+
+$userId = $_SESSION["user"]["id"];
+
+/*
+|--------------------------------------------------------------------------
+| Total Properties
+|--------------------------------------------------------------------------
+*/
+
+$stmt = $db->prepare("
+SELECT COUNT(*)
+FROM properties
+WHERE user_id=?
+AND deleted_at IS NULL
+");
+
+$stmt->execute([$userId]);
+
+$totalProperties = $stmt->fetchColumn();
+
+/*
+|--------------------------------------------------------------------------
+| Available
+|--------------------------------------------------------------------------
+*/
+
+$stmt = $db->prepare("
+SELECT COUNT(*)
+FROM properties
+WHERE user_id=?
+AND approval_status='Available'
+AND deleted_at IS NULL
+");
+
+$stmt->execute([$userId]);
+
+$availableProperties = $stmt->fetchColumn();
+
+/*
+|--------------------------------------------------------------------------
+| Occupied
+|--------------------------------------------------------------------------
+*/
+
+$stmt = $db->prepare("
+SELECT COUNT(*)
+FROM properties
+WHERE user_id=?
+AND approval_status='Occupied'
+AND deleted_at IS NULL
+");
+
+$stmt->execute([$userId]);
+
+$occupiedProperties = $stmt->fetchColumn();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport"
@@ -56,6 +112,7 @@ $properties=$stmt->fetchAll();
       <link rel="stylesheet" href="../assets/css/my-properties.css">
       <link rel="stylesheet" href="../assets/css/logout.css">
 </head>
+
 <body>
       <?php include "../components/sidebar.php"; ?>
       <main class="dashboard-content">
@@ -67,11 +124,10 @@ $properties=$stmt->fetchAll();
 
 
       </main>
-      <script src="../assets/js/my-properties.js"></script>
-      <script src="../assets/js/alerts.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/js/alerts.js"></script>
+      <script src="../assets/js/my-properties.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-

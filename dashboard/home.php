@@ -1,5 +1,6 @@
 <?php
 
+require_once "../backend/config/database.php";
 require_once "../backend/helpers/session.php";
 
 if (!isset($_SESSION["user"])) {
@@ -60,6 +61,7 @@ if (!isset($_SESSION["user"])) {
         $stmt = $db->prepare("
 SELECT COUNT(*)
 FROM properties
+WHERE deleted_at IS NULL
 ");
 
         $stmt->execute();
@@ -76,6 +78,7 @@ FROM properties
 SELECT COUNT(*)
 FROM properties
 WHERE user_id=?
+AND deleted_at IS NULL
 ");
 
 

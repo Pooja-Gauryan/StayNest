@@ -4,11 +4,11 @@
 
 <div class="modal fade"
 
-     id="logoutModal"
+    id="logoutModal"
 
-     tabindex="-1"
+    tabindex="-1"
 
-     aria-hidden="true">
+    aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered">
 
@@ -46,14 +46,8 @@
 
                     </button>
 
-                    <a
-
-                        href="logout.php"
-
-                        class="btn logout-btn">
-
+                    <a href="logout.php" class="btn logout-btn">
                         Logout
-
                     </a>
 
                 </div>
