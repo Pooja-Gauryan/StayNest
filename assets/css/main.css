@@ -1,12 +1,13 @@
-@import url("base.css");
-@import url("typography.css");
-@import url("navbar.css");
+
+/* Landing Page CSS */
 @import url("hero.css");
 @import url("features.css");
 @import url("property.css");
 @import url("testimonials.css");
 @import url("landing.css");
-@import url(dashboard.css);
-@import url(login.css);
-@import url(sidebar.css);
-@import url(logout.css);
+
+/* Dashboard & Authentication CSS */
+@import url("dashboard.css");
+@import url("login.css");
+@import url("sidebar.css");
+@import url("logout.css");
