@@ -118,14 +118,18 @@
 
                     </p>
 
+                    <?php if ((int)$property["user_id"] !== (int)($_SESSION["user"]["id"] ?? 0)): ?>
+                        <button type="button" class="btn btn-primary" id="startOwnerChat"
+                            data-owner-id="<?= (int)$property["user_id"] ?>"
+                            data-property-id="<?= (int)$property["id"] ?>">
+                            <i class="bi bi-chat-dots-fill me-1"></i> Chat with Owner
+                        </button>
+                    <?php endif; ?>
+
                     <a
-
-                        href="edit-property.php?id=<?= $property["id"] ?>"
-
+                        href="edit-property.php?id=<?= (int)$property["id"] ?>"
                         class="btn btn-warning">
-
                         Edit
-
                     </a>
 
                     <a

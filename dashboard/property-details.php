@@ -92,6 +92,24 @@ if (!$property) {
         <?php include "../components/property-details-page.php"; ?>
 
     </main>
+    <script>
+    document.getElementById('startOwnerChat')?.addEventListener('click', async function () {
+        const button = this;
+        button.disabled = true;
+        try {
+            const form = new FormData();
+            form.append('user_id', button.dataset.ownerId);
+            form.append('property_id', button.dataset.propertyId);
+            const response = await fetch('../backend/api/chat/conversations.php', { method: 'POST', body: form, credentials: 'same-origin' });
+            const result = await response.json();
+            if (!response.ok || !result.success) throw new Error(result.message || 'Unable to start chat');
+            window.location.href = 'messages.php?conversation_id=' + result.data.conversation_id;
+        } catch (error) {
+            alert(error.message);
+            button.disabled = false;
+        }
+    });
+    </script>
     <script src="../assets/js/alerts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

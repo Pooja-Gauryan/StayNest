@@ -1,252 +1,39 @@
-<!-- ==========================================================
-     Messages Page
-========================================================== -->
-
-<section class="messages-page">
-
-    <!-- Page Header -->
-
+<?php require_once __DIR__ . '/../backend/helpers/session.php'; ?>
+<script>
+    const CURRENT_USER_ID = <?= (int)($_SESSION["user"]["id"] ?? 0) ?>;
+</script>
+<section class="messages-page" id="staynestChat" data-api-base="../backend/api/chat/">
     <div class="page-header">
-
         <div>
-
             <h2>Messages</h2>
-
-            <p>Chat with property owners and students.</p>
-
+            <p>Chat directly with students and property owners.</p>
         </div>
-
     </div>
-
-    <!-- Messages Container -->
-
     <div class="messages-container">
-
-        <!-- ===================================
-                Left Side
-                Chat List
-        ==================================== -->
-
-        <div class="chat-list">
-
-            <!-- Search -->
-
-            <div class="chat-search">
-
-                <i class="bi bi-search"></i>
-
-                <input
-                    type="text"
-                    placeholder="Search chats...">
-
+        <aside class="chat-list">
+            <div class="chat-list-heading">
+                <h5>Conversations</h5><button type="button" id="refreshChats" class="chat-refresh" aria-label="Refresh conversations"><i class="bi bi-arrow-clockwise"></i></button>
             </div>
-
-            <!-- Chat Item -->
-
-            <div class="chat-item active">
-
-                <img
-                    src="../assets/images/user/default-user.png"
-                    alt="User">
-
-                <div class="chat-info">
-
-                    <h5>Rahul Sharma</h5>
-
-                    <p>Is this room available?</p>
-
-                </div>
-
-                <span class="chat-time">
-
-                    2m
-
-                </span>
-
+            <div class="chat-search"><i class="bi bi-search"></i><input id="chatSearch" type="search" placeholder="Search chats..."></div>
+            <div id="chatListItems" class="chat-list-items">
+                <div class="chat-empty">Loading conversations...</div>
             </div>
-
-            <!-- Chat Item -->
-
-            <div class="chat-item">
-
-                <img
-                    src="../assets/images/user/default-user.png"
-                    alt="User">
-
-                <div class="chat-info">
-
-                    <h5>Amit Verma</h5>
-
-                    <p>Thank you 😊</p>
-
-                </div>
-
-                <span class="chat-time">
-
-                    Yesterday
-
-                </span>
-
-            </div>
-
-            <!-- Chat Item -->
-
-            <div class="chat-item">
-
-                <img
-                    src="../assets/images/user/default-user.png"
-                    alt="User">
-
-                <div class="chat-info">
-
-                    <h5>Priya Singh</h5>
-
-                    <p>Can I visit tomorrow?</p>
-
-                </div>
-
-                <span class="chat-time">
-
-                    Mon
-
-                </span>
-
-            </div>
-
-        </div>
-
-        <!-- ===================================
-                Right Side
-                Conversation
-        ==================================== -->
-
-        <div class="chat-window">
-
-            <!-- Chat Header -->
-
-            <div class="chat-header">
-
-                <img
-                    src="../assets/images/user/default-user.png"
-                    alt="User">
-
+        </aside>
+        <section class="chat-window" aria-label="Chat conversation">
+            <header class="chat-header" id="activeChatHeader">
+                <div class="chat-avatar"><i class="bi bi-person-fill"></i></div>
                 <div>
-
-                    <h5>Rahul Sharma</h5>
-
-                    <small>Online</small>
-
+                    <h5>Select a conversation</h5><small>Your messages appear here</small>
                 </div>
-
+            </header>
+            <div class="chat-body" id="chatMessages">
+                <div class="chat-placeholder"><i class="bi bi-chat-square-text"></i>
+                    <h5>Your conversations</h5>
+                    <p>Choose a chat on the left to view messages.</p>
+                </div>
             </div>
-
-            <!-- ===================================
-                    Chat Body
-            ==================================== -->
-
-            <div class="chat-body">
-
-                <!-- Received Message -->
-
-                <div class="message received">
-
-                    <div class="message-text">
-
-                        Hi 👋
-
-                        Is this room still available?
-
-                    </div>
-
-                    <span class="message-time">
-
-                        10:30 AM
-
-                    </span>
-
-                </div>
-
-                <!-- Sent Message -->
-
-                <div class="message sent">
-
-                    <div class="message-text">
-
-                        Yes, it is available.
-
-                    </div>
-
-                    <span class="message-time">
-
-                        10:32 AM
-
-                    </span>
-
-                </div>
-
-                <!-- Received Message -->
-
-                <div class="message received">
-
-                    <div class="message-text">
-
-                        Great!
-
-                        Can I visit tomorrow morning?
-
-                    </div>
-
-                    <span class="message-time">
-
-                        10:35 AM
-
-                    </span>
-
-                </div>
-
-                <!-- Sent Message -->
-
-                <div class="message sent">
-
-                    <div class="message-text">
-
-                        Sure 👍
-
-                        You can visit after 10 AM.
-
-                    </div>
-
-                    <span class="message-time">
-
-                        10:36 AM
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <!-- ===================================
-                    Chat Footer
-            ==================================== -->
-
-            <div class="chat-footer">
-
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Type a message...">
-
-                <button class="send-btn">
-
-                    <i class="bi bi-send-fill"></i>
-
-                </button>
-
-            </div>
-
-        </div>
-
+            <form class="chat-footer" id="chatSendForm"><input type="hidden" id="activeConversationId"><input id="chatMessageInput" type="text" maxlength="2000" placeholder="Type a message..." autocomplete="off" disabled><button class="send-btn" type="submit" disabled aria-label="Send message"><i class="bi bi-send-fill"></i></button></form>
+            <div class="chat-feedback" id="chatFeedback" role="status" aria-live="polite"></div>
+        </section>
     </div>
-
 </section>

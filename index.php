@@ -1,4 +1,6 @@
-
+<?php
+require_once __DIR__ . '/backend/helpers/session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,27 +26,26 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=20261113">
+
 </head>
 
 <body>
 
     <!-- Landing Navbar -->
-    <?php include "components/landing-navbar.php"; ?>
+    <?php include __DIR__ . "/components/landing-navbar.php"; ?>
 
     <main>
 
         <!-- Hero Section -->
-        <?php include "components/landing-hero.php"; ?>
+        <?php include __DIR__ . "/components/landing-hero.php"; ?>
 
         <!-- Why Choose StayNest -->
-        <?php include "components/why-choose-us.php"; ?>
+        <?php include __DIR__ . "/components/why-choose-us.php"; ?>
 
         <!-- Featured Properties -->
-        <?php include "components/featured-properties.php"; ?>
+        <?php include __DIR__ . "/components/featured-properties.php"; ?>
 
-        <!-- Student Testimonials -->
-        <?php include "components/testimonials.php"; ?>
 
     </main>
 
@@ -89,6 +90,7 @@
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
+
 
 </body>
 </html>
