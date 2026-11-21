@@ -21,18 +21,15 @@ The platform aims to make accommodation discovery more convenient through proper
 ## 📸 Project Preview
 
 
-<img width="433" height="208" alt="image" src="https://github.com/user-attachments/assets/bd8fd83b-2a5d-4726-869d-25d09440f275" />
-
-![StayNest Homepage](<img width="433" height="208" alt="image" src="https://github.com/user-attachments/assets/cbc351e3-5ed8-49d3-9621-5b39cf839715" />
-)
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/ce41aa71-fc5c-4f2d-9821-1c0acdfc70af" />
 
 *StayNest Homepage*
 
-![Property Listings](screenshots/properties.png)
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/0abab024-16d6-4af1-beee-5361ae4dce43" />
 
 *Property Listings*
 
-![Property Details](screenshots/property-details.png)
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/2c0fe6a3-a008-468c-b034-576317411625" />
 
 *Property Details*
 
@@ -174,9 +171,7 @@ Want to explore the live application?
 
 Scan the QR code below to visit StayNest.
 
-<!-- Replace this path with your QR code image -->
-
-![StayNest QR Code](screenshots/staynest-qr.png)
+<img width="200" height="200" alt="Staynest_QR" src="https://github.com/user-attachments/assets/c71dda14-dbbf-441d-92ad-2fd4f68bbe7d" />
 
 ---
 
