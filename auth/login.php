@@ -61,7 +61,10 @@
                         </div>
 
 
-                        <form action="../backend/api/auth/login.php" method="POST">
+                        <form
+                            id="loginForm"
+                            action="../backend/api/auth/login.php"
+                            method="POST">
 
                             <input type="hidden" name="abc" value="12345">
 
@@ -148,8 +151,11 @@
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="../assets/js/login.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

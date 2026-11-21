@@ -63,7 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         </div>
 
-                        <form action="../backend/api/auth/signup.php" method="POST">
+                        <form
+                            id="signupForm"
+                            action="../backend/api/auth/signup.php"
+                            method="POST">
                             <!-- Full Name -->
 
                             <div class="mb-3">
@@ -150,6 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <input
                                     type="password"
+                                    name="confirm_password"
                                     class="form-control"
                                     placeholder="Confirm your password"
                                     required>
@@ -189,6 +193,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
     </section>
+
+    <script src="../assets/js/signup.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

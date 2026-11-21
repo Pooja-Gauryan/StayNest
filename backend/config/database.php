@@ -1,26 +1,19 @@
 <?php
-
 declare(strict_types=1);
-
 require_once __DIR__ . '/config.php';
 
-class Database
-{
+class Database{
     private static ?PDO $connection = null;
 
-    public static function connect(): PDO
-    {
+    public static function connect(): PDO{
         if (self::$connection === null) {
-
-            $host = "127.0.0.1";
-            $db   = "staynest";
-            $user = "root";
-            $pass = "";
+            $host = "sql103.infinityfree.com";
+            $db   = "if0_42504514_staynest_db";
+            $user = "if0_42504514";
+            $pass = "IshikaPooja";
 
             $dsn = "mysql:host={$host};dbname={$db};charset=utf8mb4";
-
-            try {
-
+            try{
                 self::$connection = new PDO(
                     $dsn,
                     $user,
@@ -32,16 +25,11 @@ class Database
                     ]
                 );
             } catch (PDOException $e) {
-
-                http_response_code(500);
-
-                die(json_encode([
-                    "success" => false,
-                    "message" => $e->getMessage()
-                ]));
+                // Let the calling page/API handle the connection failure.
+                // Landing page components can render their own empty states.
+                throw $e;
             }
         }
-
         return self::$connection;
     }
 }

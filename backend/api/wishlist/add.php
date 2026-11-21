@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 require_once "../../config/database.php";
@@ -8,79 +7,36 @@ require_once "../../helpers/response.php";
 require_once "../../middleware/auth.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    jsonResponse(false, "Invalid Request", [], 405);
+    jsonResponse(false, "Invalid request method.", [], 405);
 }
 
 $db = Database::connect();
+$userId = (int)$_SESSION["user"]["id"];
+$propertyId = filter_input(INPUT_POST, "property_id", FILTER_VALIDATE_INT);
 
-$userId = $_SESSION["user"]["id"];
-$propertyId = (int)($_POST["property_id"] ?? 0);
-
-if ($propertyId <= 0) {
-    jsonResponse(false, "Invalid Property");
+if (!$propertyId || $propertyId < 1) {
+    jsonResponse(false, "Please select a valid property.", [], 422);
 }
 
-/*
-|--------------------------------------------------------------------------
-| Already Exists?
-|--------------------------------------------------------------------------
-*/
-
-$check = $db->prepare("
-SELECT id
-FROM wishlist
-WHERE user_id=?
-AND property_id=?
-LIMIT 1
+$property = $db->prepare("
+    SELECT id FROM properties
+    WHERE id = ? AND deleted_at IS NULL AND is_available = 1
+    LIMIT 1
 ");
+$property->execute([$propertyId]);
 
-$check->execute([
-    $userId,
-    $propertyId
-]);
-
-if ($check->fetch()) {
-
-    jsonResponse(
-        false,
-        "Already Added"
-    );
-
+if (!$property->fetch()) {
+    jsonResponse(false, "This property is no longer available.", [], 404);
 }
 
-/*
-|--------------------------------------------------------------------------
-| Save Wishlist
-|--------------------------------------------------------------------------
-*/
-
-$stmt = $db->prepare("
-INSERT INTO wishlist(
-
-user_id,
-property_id
-
-)
-
-VALUES(
-
-?,?
-
-)
+$insert = $db->prepare("
+    INSERT IGNORE INTO wishlist (user_id, property_id)
+    VALUES (?, ?)
 ");
+$insert->execute([$userId, $propertyId]);
 
-$stmt->execute([
+if ($insert->rowCount() === 0) {
+    jsonResponse(true, "This property is already in your wishlist.", ["saved" => true]);
+}
 
-$userId,
-
-$propertyId
-
-]);
-
-jsonResponse(
-
-true,
-
-"Added To Wishlist"
-
-);
+jsonResponse(true, "Property added to your wishlist.", ["saved" => true]);

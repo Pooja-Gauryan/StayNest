@@ -7,5 +7,5 @@ require_once "../../helpers/session.php";
 session_unset();
 session_destroy();
 
-header("Location: http://localhost/StayNest/");
+header("Location: ../../../index.php");
 exit;

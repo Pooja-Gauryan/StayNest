@@ -1,0 +1,458 @@
+/*
+==========================================================
+ StayNest - Mobile Responsive Overrides
+ Additive stylesheet: keeps existing desktop styling intact.
+==========================================================
+*/
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+/* Avoid flex/grid children forcing horizontal overflow */
+.row > *,
+[class*="col-"],
+.property-card,
+.my-property-card,
+.feature-card,
+.testimonial-card,
+.details-card,
+.profile-card,
+.profile-form-card {
+    min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+    /* Landing hero variants */
+    .hero-section,
+    .landing-hero {
+        min-height: auto;
+        padding-top: 125px;
+        padding-bottom: 65px;
+    }
+
+    .hero-section .container,
+    .landing-hero .container {
+        width: 100%;
+    }
+
+    .hero-title,
+    .landing-title {
+        font-size: clamp(2.25rem, 6vw, 3rem);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description,
+    .landing-description,
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .hero-search {
+        gap: 12px;
+    }
+
+    .hero-stats {
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .hero-image,
+    .hero-image-wrapper img {
+        max-width: min(100%, 430px);
+        height: auto;
+        margin-inline: auto;
+    }
+
+    .featured-properties,
+    .featured-section,
+    .features-section,
+    .testimonials-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-title,
+    .section-header h2 {
+        font-size: clamp(1.9rem, 4.5vw, 2.4rem);
+    }
+
+    .property-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image {
+        height: 360px;
+    }
+
+    .gallery-grid img {
+        height: 190px;
+    }
+
+    .property-header,
+    .property-meta {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .landing-navbar {
+        padding: 12px 0;
+    }
+
+    .logo-text {
+        font-size: 23px;
+    }
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 4px 0;
+        padding: 9px 4px;
+    }
+
+    .hero-search {
+        flex-direction: column;
+        padding: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-search input,
+    .hero-input,
+    .hero-search-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-search-btn {
+        height: 52px;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .stat-box,
+    .stat-card {
+        min-width: 0;
+        width: 100%;
+        padding: 17px;
+        text-align: center;
+    }
+
+    .stat-box h3,
+    .stat-card h3 {
+        font-size: 27px;
+    }
+
+    .feature-card {
+        padding: 30px 22px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .testimonial-user img {
+        width: 58px;
+        height: 58px;
+        margin-right: 13px;
+    }
+
+    .property-image {
+        height: 210px;
+    }
+
+    .property-content,
+    .property-body {
+        padding: 19px;
+    }
+
+    .property-footer {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .property-footer h5 {
+        font-size: 21px;
+    }
+
+    .my-property-image {
+        height: 200px;
+    }
+
+    .my-property-body {
+        padding: 19px;
+    }
+
+    .property-actions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .property-actions .btn {
+        padding: 9px 6px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .profile-card,
+    .profile-form-card,
+    .details-card {
+        padding: 24px;
+    }
+
+    .signup-section {
+        padding: 24px 12px;
+    }
+
+    .signup-card {
+        padding: 30px 22px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section,
+    .landing-hero {
+        padding-top: 110px;
+        padding-bottom: 48px;
+    }
+
+    .hero-title,
+    .landing-title {
+        font-size: clamp(1.9rem, 9vw, 2.35rem);
+        margin-top: 20px;
+    }
+
+    .hero-description,
+    .landing-description,
+    .hero-text {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 9px 14px;
+        max-width: 100%;
+    }
+
+    .btn-start,
+    .btn-login,
+    .btn-outline-custom {
+        width: 100%;
+        margin: 7px 0;
+        text-align: center;
+        padding: 12px 18px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box,
+    .stat-card {
+        padding: 14px 10px;
+    }
+
+    .stat-box h3,
+    .stat-card h3 {
+        font-size: 23px;
+    }
+
+    .featured-properties,
+    .featured-section,
+    .features-section,
+    .testimonials-section {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .section-title,
+    .section-header h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .section-description,
+    .section-header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h4,
+    .property-body h4,
+    .property-content h4 {
+        font-size: 19px;
+    }
+
+    .property-image {
+        height: 190px;
+    }
+
+    .my-property-image {
+        height: 185px;
+    }
+
+    .property-top,
+    .property-footer {
+        align-items: flex-start;
+    }
+
+    .property-footer {
+        flex-direction: column;
+    }
+
+    .property-btn,
+    .view-btn,
+    .add-property-btn,
+    .save-profile-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .property-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .property-actions .btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .property-gallery {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .main-image {
+        height: 250px;
+        border-radius: 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: 125px;
+        border-radius: 12px;
+    }
+
+    .property-header h2,
+    .property-price {
+        font-size: 26px;
+    }
+
+    .property-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .feature-box {
+        padding: 15px 10px;
+    }
+
+    .details-card {
+        padding: 20px;
+        border-radius: 17px;
+    }
+
+    .details-card h3 {
+        font-size: 21px;
+    }
+
+    .owner-info {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 13px;
+    }
+
+    .owner-image {
+        width: 65px;
+        height: 65px;
+        flex: 0 0 65px;
+    }
+
+    .owner-contact {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .owner-contact .btn {
+        width: 100%;
+    }
+
+    .profile-card,
+    .profile-form-card {
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .account-info p {
+        align-items: flex-start;
+        overflow-wrap: anywhere;
+    }
+
+    .signup-card {
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .signup-card h2 {
+        font-size: 25px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .page-link {
+        padding: 8px 12px;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

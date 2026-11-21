@@ -207,7 +207,7 @@ try {
 
     $db->commit();
 
-    header("Location: http://localhost/StayNest/dashboard/my-properties.php");
+    header("Location: ../../../dashboard/my-properties.php");
     exit;
 } catch (Exception $e) {
 

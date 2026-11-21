@@ -6,7 +6,7 @@ require_once __DIR__ . "/../helpers/session.php";
 
 if (isset($_SESSION["user"])) {
 
-    header("Location: http://localhost/StayNest/dashboard/home.php");
+    header("Location: ../../dashboard/home.php");
     exit;
 
 }

@@ -14,7 +14,7 @@ define('APP_NAME', 'StayNest');
 define('APP_DEBUG', true);
 define('APP_ENV', 'development');
 
-define('BASE_URL', 'http://localhost/StayNest');
+define('BASE_URL', 'https://staynest.infinityfreeapp.com/');
 
 define('UPLOAD_PROFILE', '../uploads/profile/');
 define('UPLOAD_PROPERTIES', '../uploads/property/');
